@@ -1,0 +1,15 @@
+h3{
+    display: inline-block;
+    margin: 10px;
+}
+.buttons{
+    display: inline-block;
+    margin: 3px;
+}
+#box{
+    height: 300px;
+    width: 300px;
+    border: solid black;
+    padding-top: 10px;
+    padding-left: 10px;
+}

@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dojodachi!</title>
+        <link rel="stylesheet" href="~/css/style.css"/>
+    </head>
+    <body>
+        <center>
+            <h3>Fullness: @ViewBag.MyDog.Fullness</h3>
+            <h3>Happiness: @ViewBag.MyDog.Happiness</h3>
+            <h3>Meals: @ViewBag.MyDog.Meals</h3>
+            <h3>Energy: @ViewBag.MyDog.Energy</h3>
+            <div id="box">
+                <h4>@ViewBag.Message</h4>
+            </div>
+              @if (ViewBag.Win != true && ViewBag.Win != false )
+            {
+    
+            <div class="buttons">
+                <form action="/feed" method="POST">
+                    <button type="submit" value="feed" name="feed">Feed</button>
+                </form>
+            </div>
+            <div class="buttons">
+                <form action="/work" method="POST">
+                    <button type="submit" value="work" name="work">Work</button>
+                </form>
+            </div>
+            <div class="buttons">
+                <form action="/play" method="POST">
+                    <button type="submit" value="play" name="play" >Play</button>
+                </form>
+            </div>
+            <div class="buttons">
+                <form action="/sleep" method="POST">
+                    <button type="submit" value="sleep" name="sleep">Sleep</button>
+                </form>
+            </div>
+            }
+            @if (ViewBag.Win == true || ViewBag.Win == false )
+            {
+                <div class="buttons">
+                <form action="/reset" method="POST">
+                    <input type="submit" name="reset" value="Reset">
+                </form>
+            </div>
+                
+            }
+        </center>
+    </body>
+</html>
+
